@@ -12,7 +12,7 @@ const products = [
     description: 'Крупный калифорнийский миндаль сорта Nonpareil, обжаренный до золотистой текстуры, окружён слоем насыщенного горького ремесленного шоколада с содержанием какао 70%. Равное соотношение миндаля и шоколада делает вкус идеальным: глубокая, благородная горечь шоколада подчёркивает естественную сладость и хруст ореха.',
     feature: 'Для тех, кто любит чистоту вкуса, где нет ничего лишнего',
     color: '#E67E7E', // Coral/Peach
-    image: 'https://placehold.co/600x600.png',
+    image: '/images/almond1.jpg',
     aiHint: 'dark chocolate almond'
   },
   {
@@ -20,7 +20,7 @@ const products = [
     description: 'Калифорнийский миндаль сорта Nonpareil покрыт двумя слоями ремесленного шоколада. Первый — горький шоколад 70%, насыщенный и сложный. Второй — молочный шоколад, нежный и сливочный. Сначала молочный шоколад радует лёгкой сладостью, затем горький шоколад добавляет изысканности, а в финале ореховый хруст миндаля завершает композицию.',
     feature: 'Настоящий дуэт контрастов',
     color: '#A076C4', // Purple
-    image: 'https://placehold.co/600x600.png',
+    image: '/images/mil2.jpg',
     aiHint: 'milk chocolate almond'
   },
   {
@@ -28,7 +28,7 @@ const products = [
     description: 'Калифорнийский миндаль сорта Nonpareil сначала погружается в тёмный ремесленный шоколад, а затем покрывается слоем нежного белого шоколада. Белый шоколад встречает мягкой сладостью, тёмный — привносит структуру и насыщенность, а миндаль в центре завершает симфонию ярким хрустом.',
     feature: 'Сочетание плавной сладости и благородной глубины',
     color: '#76A9C4', // Blue
-    image: 'https://placehold.co/600x600.png',
+    image: '/images/white3.jpg',
     aiHint: 'white chocolate almond'
   },
   {
@@ -36,7 +36,7 @@ const products = [
     description: 'Калифорнийский миндаль сорта Nonpareil и шоколад "Карамель" с розовой гималайской солью создают изысканное сочетание. Шоколад обволакивает орех теплыми оттенками топлёного молока и карамели, а кристаллы гималайской соли добавляют лёгкий солоноватый акцент. Сначала — нежная карамель, затем — контрастный солёный акцент, а в финале — хруст миндаля.',
     feature: 'Для тех, кто ищет необычные и запоминающиеся сочетания',
     color: '#E6A27E', // Orange/Gold
-    image: 'https://placehold.co/600x600.png',
+    image: '/images/caramel4.jpg',
     aiHint: 'caramel chocolate almond'
   },
 ];
@@ -46,8 +46,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background font-body">
       <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="text-3xl font-bold font-headline text-primary">
-            ALMO
+          <Link href="/" className="flex items-center">
+            <Image src="/images/logo.png" alt="ALMO Logo" width={120} height={40} className="h-10 w-auto" />
           </Link>
           <nav className="hidden items-center space-x-6 text-lg md:flex">
             <Link href="#collection" className="transition-colors hover:text-primary">
@@ -67,7 +67,7 @@ export default function Home() {
         <section id="hero" className="py-20 md:py-32">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold tracking-tight font-headline md:text-7xl lg:text-8xl text-primary">
-              ALMO
+              <Image src="/images/logo.png" alt="ALMO" width={300} height={100} className="mx-auto h-20 w-auto md:h-28 lg:h-32" />
             </h1>
             <p className="mt-4 text-xl md:text-2xl font-headline text-muted-foreground">
               Гармония природных компонентов
@@ -123,7 +123,7 @@ export default function Home() {
               </p>
             </div>
             <div className="order-1 md:order-2">
-                 <Image src="https://placehold.co/800x600.png" alt="Artisan chocolate making" width={800} height={600} className="rounded-lg shadow-xl" data-ai-hint="artisan chocolate" />
+                 <Image src="/images/mainPhoto.jpg" alt="ALMO Premium Delights" width={800} height={600} className="rounded-lg shadow-xl" />
             </div>
           </div>
         </section>
