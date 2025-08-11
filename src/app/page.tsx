@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, Phone, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -157,25 +157,14 @@ export default function Home() {
                    </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center space-y-6">
-                 <p className="text-lg text-center text-muted-foreground">Отсканируйте для быстрого доступа к нашему сайту</p>
-                 <div className="p-4 bg-white rounded-lg shadow-md">
-                   <Image src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://almo-delights.example.com" alt="QR Code" width={200} height={200} />
-                 </div>
-              </div>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="bg-background border-t">
-        <div className="container mx-auto px-4 py-8 md:px-6 flex flex-col md:flex-row items-center justify-between">
+        <div className="container mx-auto px-4 py-8 md:px-6 flex flex-col md:flex-row items-center justify-center">
           <p className="text-muted-foreground">&copy; {new Date().getFullYear()} ALMO. Все права защищены.</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
-            <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
-            <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
-          </div>
         </div>
       </footer>
     </div>
